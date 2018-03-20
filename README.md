@@ -52,7 +52,7 @@ CMD ["java","-jar","notes-1.0-SNAPSHOT.jar"]
 
 **step 6**
 
-Build an image using docker.
+Build an image using docker I have called my image mld.
 ```
 cd <project path>/build/lib
 docker build -t mld .
