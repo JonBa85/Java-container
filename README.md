@@ -40,7 +40,7 @@ gradlew.bat clean build
 ```
 **Step 5**
 
-Create a Dockerfile in the <projecct path>\build\lib folder to build the docker image.
+Create a Dockerfile in the <projecct path>\build\lib folder to build the docker image from.
 ```
 FROM java:8
 MAINTAINER JonBall
