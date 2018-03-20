@@ -18,7 +18,7 @@ docker pull apache/couchdb:1.7.1
 ```
 ### **Step 2**
 
-Run the couchdb image as a container, expose it on port 5984 and name the container couchdb
+Run the couchdb image as a container, expose it on port 5984 and name the container "couchdb".
 ```
 docker run -d -p 5984:5984 --name couchdb apache/couchdb:1.7.1
 ```
