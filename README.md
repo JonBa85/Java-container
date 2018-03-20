@@ -26,8 +26,42 @@ docker run -d -p 5984:5984 --name couchdb apache/couchdb:1.7.1
 
 The Java application connects to the database using http://couchdb:5984 so a local host entry is required for couchdb resolution.
 
-Edit C:\Windows\System32\drivers\etc\hosts and add.
+Edit C:\Windows\System32\drivers\etc\hosts and add an entry for couchdb to resolve to the Docker IP.
 ```
 "DOCKER NAT IP"	couchdb
+```
+**Step 4**
+
+Build the Java application. This will build the application and put the .jar files in <projecct path>\build\lib
+```
+git clone https://github.com/MyLifeDigital/mld-devops-test.git
+cd <project path>
+gradlew.bat clean build
+```
+**Step 5**
+
+Create a Dockerfile in the <projecct path>\build\lib folder to build the docker image.
+```
+FROM java:8
+MAINTAINER JonBall
+WORKDIR /home
+EXPOSE 8080:8080
+ADD notes-1.0-SNAPSHOT.jar /home/notes-1.0-SNAPSHOT.jar
+CMD ["java","-jar","notes-1.0-SNAPSHOT.jar"]
+```
+
+**step 6**
+
+Build an image using docker.
+```
+cd <project path>/build/lib
+docker build -t mld .
+```
+
+**step 7**
+
+Run a container from the image and link it to the running CouchDB container
+```
+docker run -d --name mld1 --link couchdb mld
 ```
 
