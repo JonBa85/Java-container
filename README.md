@@ -50,21 +50,21 @@ ADD notes-1.0-SNAPSHOT.jar /home/notes-1.0-SNAPSHOT.jar
 CMD ["java","-jar","notes-1.0-SNAPSHOT.jar"]
 ```
 
-**step 6**
+**Step 6**
 
-Build an image using docker I have called my image mld.
+Build an image using the Dockerfile, I have called my image mld.
 ```
 cd <project path>/build/lib
 docker build -t mld .
 ```
 
-**step 7**
+**Step 7**
 
 Run a container from the image, publish it to port 8080 and link it to the running CouchDB container.
 ```
 docker run -d --name mld1 -p 8080:8080 --link couchdb mld
 ```
-**step 8**
+**Step 8**
 
 Confirm the application is running by browsing to http://"DOCKER NAT IP":8080/swagger-ui.html and testing the application.
     
