@@ -62,7 +62,7 @@ docker build -t mld .
 
 Run a container from the image and link it to the running CouchDB container.
 ```
-docker run -d --name mld1 --link couchdb mld
+docker run -d --name mld1 --p 8080:8080 --link couchdb mld
 ```
 **step 8**
 
