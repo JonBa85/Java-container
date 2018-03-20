@@ -64,4 +64,8 @@ Run a container from the image and link it to the running CouchDB container
 ```
 docker run -d --name mld1 --link couchdb mld
 ```
+**step 8**
 
+Confirm the application is running by browsing to http://<machineip>:8080/swagger-ui.html and testing the application
+    
+   
