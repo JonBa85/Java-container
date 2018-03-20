@@ -66,6 +66,6 @@ docker run -d --name mld1 --link couchdb mld
 ```
 **step 8**
 
-Confirm the application is running by browsing to http://<DOCKER NAT IP>:8080/swagger-ui.html and testing the application.
+Confirm the application is running by browsing to http://"DOCKER NAT IP":8080/swagger-ui.html and testing the application.
     
    
