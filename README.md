@@ -2,7 +2,7 @@
 
 **Solution by Jon Ball**
 
-The task is to run a Java application using docker with CouchDB as its backend, my solution below enables the application to run as a container along with CouchDB on the local machine.
+The task is to run a Java application using docker with CouchDB as its backend on port 5984, my solution below enables the application to run as a container along with CouchDB on the local machine.
 
 ### **Software used for the task**
 
@@ -12,7 +12,13 @@ The task is to run a Java application using docker with CouchDB as its backend, 
 
 ### **Step 1**
 
-Use docker to pull apache couchdb image
+Use docker to pull apache couchdb image.
 ```
 docker pull apache/couchdb:1.7.1
+```
+### **Step 2**
+
+Run the couchdb image as a container, expose it on port 5984 and name the container couchdb
+```
+docker run -d -p 5984:5984 --name couchdb apache/couchdb:1.7.1
 ```
