@@ -25,6 +25,7 @@ docker run -d -p 5984:5984 --name couchdb apache/couchdb:1.7.1
 ### **Step 3**
 
 The Java application connects to the database using http://couchdb:5984 so a local host entry is required for couchdb resolution.
+
 Edit C:\Windows\System32\drivers\etc\hosts and add
 ```
 "DOCKER NAT IP"	couchdb
