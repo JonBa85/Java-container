@@ -12,7 +12,7 @@ The task is to run a Java application in a container using docker with CouchDB a
 
 **Step 1**
 
-Use docker to pull apache couchdb image.
+Use docker to download an apache couchdb image.
 ```
 docker pull apache/couchdb:1.7.1
 ```
