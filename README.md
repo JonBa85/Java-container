@@ -4,6 +4,11 @@
 
 The task is to run a Java application in a container using docker with CouchDB as its backend on port 5984, my solution below enables the application to run as a container along with CouchDB on the local machine.
 
+A copy of my docker image can be pulled using:
+```
+docker pull jonball85/java_container
+```
+
 **Software used for the task**
 
     Java jdk-8u161-windows-x64
